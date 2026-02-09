@@ -1,0 +1,16 @@
+{
+  "name": "devportfolio-pro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "live-server --open=./index.html --port=8080"
+  },
+  "dependencies": {
+    "animejs": "^4.3.5",
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
