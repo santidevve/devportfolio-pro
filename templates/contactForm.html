@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Contacto</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-      (function(){
-        emailjs.init({
-          publicKey: 'DtwCsHW8wLb1kXdJp',
-        });
-      })();
-    </script>
-    <script src="{{ url_for('static', filename='contactForm.js') }}"></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#contact-form">Saltar al formulario</a>
-    <header class="site-header">
-      <div class="container nav-row">
-        <a class="brand" href="{{ url_for('home') }}">Santiago Hernandez</a>
-        <nav class="nav-links" aria-label="Navegacion principal">
-          <a href="{{ url_for('home') }}">Inicio</a>
-        </nav>
-        <a class="btn btn-ghost" href="{{ url_for('home') }}">Volver</a>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Contacto | Santiago Hernandez</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+
+<body>
+  <a class="skip-link" href="#contact-form">Saltar al formulario</a>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="{{ url_for('home') }}">Santiago Hernandez</a>
+      <nav class="nav-links" aria-label="Navegacion principal">
+        <a href="{{ url_for('home') }}">Inicio</a>
+      </nav>
+      <a class="btn btn-ghost" href="{{ url_for('home') }}">Volver</a>
+    </div>
+  </header>
+  <main class="contact-form">
+    <section class="container">
+      <div class="section-head">
+        <h3>Formulario de contacto</h3>
+        <p>Cuéntame sobre tu proyecto y te responderé lo antes posible.</p>
       </div>
-    </header>
-    <main class="contact-form">
-      <section class="container">
-        <div class="section-head">
-          <h3>Formulario de contacto</h3>
-          <p>Cuéntame sobre tu proyecto y te responderé lo antes posible.</p>
+      <form id="contact-form" class="form-card">
+        <div class="form-row">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
         </div>
-        <form id="contact-form" class="form-card">
-          <div class="form-row">
-            <label for="name">Nombre</label>
-            <input type="text" id="name" name="user_name" placeholder="Ingresa tu nombre" required>
-          </div>
-          <div class="form-row">
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="user_email" placeholder="Ingresa tu correo" required>
-          </div>
-          <div class="form-row">
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
-          </div>
-          <p class="form-note">Responderé dentro de 24-48 horas hábiles.</p>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-      </section>
-    </main>
-  </body>
+        <div class="form-row">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+        </div>
+        <div class="form-row">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+        </div>
+        <!-- Mensaje de estado -->
+        <div id="form-status" class="form-status"></div>
+        <p class="form-note">Responderé dentro de 24-48 horas hábiles.</p>
+        <button type="submit" id="submit-btn" class="btn btn-primary">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='contactForm.js') }}"></script>
+</body>
+
 </html>

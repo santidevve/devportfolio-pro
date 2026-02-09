@@ -1,52 +1,111 @@
-from flask import Flask, render_template
-from flask_mail import Mail, Message
-import requests
+"""
+Portfolio Personal - Backend Flask
 
+Este módulo configura el servidor Flask para el portfolio personal,
+incluyendo el envío de correos desde el formulario de contacto.
+
+Autor: Santiago Hernandez Pontiles
+"""
+
+import os
+from flask import Flask, render_template, request, jsonify
+from flask_mail import Mail, Message
+from dotenv import load_dotenv
+
+# Cargar variables de entorno desde .env
+load_dotenv()
 
 app = Flask(__name__)
 
-# Configura tu servidor SMTP
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # O tu proveedor
+# =============================================
+# Configuración de Flask-Mail
+# =============================================
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'santiagopontilescs@gmail.com'  # Tu correo
-app.config['MAIL_PASSWORD'] = 'tu_contraseña_app'  # Contraseña de aplicación
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_USERNAME')
 
 mail = Mail(app)
 
+
+# =============================================
+# Rutas de la aplicación
+# =============================================
+
+@app.route("/", methods=['GET'])
+def home():
+    """Página principal del portfolio."""
+    return render_template('index.html')
+
+
+@app.route("/contact", methods=['GET'])
+def contact():
+    """Página del formulario de contacto."""
+    return render_template('contactForm.html')
+
+
 @app.route('/send-email', methods=['POST'])
 def send_email():
+    """
+    Endpoint para enviar correos desde el formulario de contacto.
+    
+    Espera un JSON con:
+    - name: Nombre del remitente
+    - email: Correo del remitente
+    - message: Mensaje del contacto
+    
+    Returns:
+        JSON con success (bool) y message (str)
+    """
     data = request.json
+    
+    # Validar datos requeridos
+    if not data or not all(key in data for key in ['name', 'email', 'message']):
+        return jsonify({
+            'success': False, 
+            'message': 'Faltan datos requeridos (name, email, message)'
+        }), 400
+    
     try:
+        # Crear el mensaje
         msg = Message(
-            subject=f"Nuevo mensaje de {data['name']}",
-            sender=app.config['MAIL_USERNAME'],
-            recipients=['tu_email@gmail.com']  # Donde recibirás los correos
+            subject=f"[Portfolio] Nuevo mensaje de {data['name']}",
+            recipients=[os.getenv('MAIL_RECIPIENT', os.getenv('MAIL_USERNAME'))]
         )
+        
+        # Cuerpo del correo
         msg.body = f"""
+        
         Nombre: {data['name']}
         Email: {data['email']}
         
         Mensaje:
         {data['message']}
+        
+        ___________________________________________________
+        Enviado desde santiagopontiles.com
         """
+        
+        # Enviar correo
         mail.send(msg)
-        return jsonify({'success': True, 'message': 'Correo enviado correctamente'})
+        
+        return jsonify({
+            'success': True, 
+            'message': 'Correo enviado correctamente'
+        })
+        
     except Exception as e:
-        return jsonify({'success': False, 'message': str(e)}), 500
-    
+        print(f"Error al enviar correo: {str(e)}")
+        return jsonify({
+            'success': False, 
+            'message': 'Error al enviar el correo. Intenta de nuevo más tarde.'
+        }), 500
 
 
-@app.route("/", methods=['GET','POST'])
-def home():
-    return render_template('index.html')
-
-@app.route("/contact", methods=['GET','POST'])
-def contact():
-    return render_template('contactForm.html')
-
-
-
-# start app in development environment
-if __name__=="__main__":
+# =============================================
+# Iniciar aplicación
+# =============================================
+if __name__ == "__main__":
     app.run(debug=True)
