@@ -53,15 +53,15 @@ h6 {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
 }
 
 h2 {
-  font-size: 2.75rem;
+  font-size: clamp(2rem, 4vw + 1rem, 3rem);
 }
 
 h3 {
-  font-size: 2.25rem;
+  font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
 }
 
 h4 {
@@ -654,29 +654,79 @@ footer {
 [data-reveal].visible {
   opacity: 1;
   transform: translateY(0);
-  align-items: center;  
+  align-items: center;
 }
 
 @media (max-width: 900px) {
   .nav-links {
-    display: none
+    display: none;
   }
 
   .menu-toggle {
-    display: inline-flex
+    display: inline-flex;
   }
 
   .container {
     padding: 64px 20px;
   }
 
-  .container p {
-    font-size: 1.2rem;
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .cta-row,
+  .stats,
+  .social-links {
+    justify-content: center;
   }
 
   .contact-card {
     flex-direction: column;
-    align-items: flex-start
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    gap: 32px;
+  }
+
+  .contact-actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card-image {
+    margin: 0 auto;
+    max-width: 280px;
+    /* Tamaño controlado en móviles/tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-copy h1 {
+    font-size: 2.5rem;
+    /* Asegurar que no sea gigante en móvil */
+  }
+
+  .section-head h3 {
+    font-size: 2rem;
+  }
+
+  .projects .grid,
+  .cv-skills-list,
+  .cv-languages,
+  .cv-references {
+    grid-template-columns: 1fr;
+    /* Columna única en móviles */
+  }
+
+  .btn {
+    width: 100%;
+    /* Botones full width en móvil */
+  }
+
+  .pill-row {
+    justify-content: center;
   }
 }
 
