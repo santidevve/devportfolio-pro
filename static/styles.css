@@ -16,6 +16,17 @@
   box-sizing: border-box
 }
 
+/* Fondo de galaxia animado */
+#galaxy-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
 body {
   margin: 0;
   font-family: "Space Grotesk", "Segoe UI", Tahoma, sans-serif;
@@ -39,11 +50,11 @@ a {
 .container {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 80px 24px
+  padding: 48px 24px
 }
 
 .section {
-  padding: 40px 0
+  padding: 16px 0
 }
 
 .skip-link {
@@ -387,6 +398,7 @@ a {
   font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 2rem;
   margin: 0 0 8px;
+  align-content: center;
 }
 
 .section-head p {
@@ -699,4 +711,20 @@ footer {
   #cv-viewer {
     height: 400px;
   }
+}
+
+/* =============================================
+   Footer
+   ============================================= */
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 24px;
+  border-top: 1px solid var(--stroke);
+}
+
+#footer .social-links {
+  justify-content: center;
 }
