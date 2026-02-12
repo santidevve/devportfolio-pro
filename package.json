@@ -7,6 +7,7 @@
     "start": "live-server --open=./index.html --port=8080"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "animejs": "^4.3.5",
     "bootstrap": "^5.3.8"
   },
