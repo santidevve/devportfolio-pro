@@ -21,14 +21,14 @@
         <a class="brand" href="#hero">Santiago Hernandez</a>
         <nav class="nav-links" aria-label="Secciones">
           <a href="#about">Sobre mi</a>
-          <a href="#projects">Proyectos</a>
+          <a href="#websites">Páginas web</a>
         </nav>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
         <a class="btn btn-ghost" href="#contact">Hablemos</a>
       </div>
       <nav id="mobile-menu" class="mobile-menu" aria-label="Navegacion movil">
         <a href="#about">Sobre mi</a>
-        <a href="#projects">Proyectos</a>
+        <a href="#websites">Páginas web</a>
       </nav>
     </header>
 
@@ -42,7 +42,7 @@
               <h1>Santiago Hernandez.</h1>
               <p class="lead">Ingeniero Industrial con habilidades de programación web y análisis de datos.</p>
               <div class="cta-row">
-                <a class="btn btn-primary" href="#projects">Ver proyectos</a>
+                <a class="btn btn-primary" href="#websites">Ver páginas web</a>
               </div>
               <div class="stats">
                 <div class="stat">
@@ -59,20 +59,18 @@
               <img class="card-image" src="{{ url_for('static', filename='cv-photo.png') }}"
                 alt="Foto de Santiago Hernandez">
               <div class="card-body">
-                <p style="text-align: justify;">Experimentado en Flask, Django y automatización con IA.
-                  He realizado gestión de compra de dominios,
-                  así como configuración de e-mails corporativos y hosting para páginas web empresariales.
+                <p style="text-align: justify;">Experimentado en desarrollo y despliegue de webs empresariales.
+                  Gestión de compra de dominios,
+                  así como configuración de e-mails corporativos y alojamiento del sitio.
                 </p>
                 <div class="pill-row">
-                  <span class="pill">Automatización con IA</span>
+                  <span class="pill">Diseño de sitios web corporativos</span>
                   <span class="pill">UX/UI</span>
                   <span class="pill">Hosting Empresarial</span>
                   <span class="pill">Gestión de Dominios</span>
-                  <span class="pill">Control y Documentación de Procesos</span>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -90,11 +88,12 @@
               Si buscas a alguien que entienda de métricas, procesos y código, hablemos.</p>
           </div>
           <div class="stack">
-            <h4>Stack principal</h4>
+            <h4>Tecnologias Manejadas</h4>
             <ul class="tag-list">
               <li>Flask</li>
               <li>Django</li>
-              <li>Automatización con IA</li>
+              <li>JS Vanilla</li>
+              <li>SQL</li>
             </ul>
           </div>
         </div>
@@ -105,55 +104,74 @@
           <div class="trust-content">
             <h4>Confían en mi trabajo</h4>
             <div class="trust-logos">
-              <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo de God Shoes Vzla" class="company-logo">
-              <img src="{{ url_for('static', filename='logo_vitca.png') }}" alt="Logo de VITCATechnology"
-                class="company-logo">
-              <img src="{{ url_for('static', filename='logo_powerrental.jpeg') }}" alt="Logo de Powerrental"
-                class="company-logo">
-              <img src="{{ url_for('static', filename='neduarca-logo.png') }}" alt="Logo de Neduarca"
-                class="company-logo">
+              <a href="https://godsneakers.com/" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo de God Shoes Vzla" class="company-logo">
+              </a>
+              <img src="{{ url_for('static', filename='logo_vitca.png') }}" alt="Logo de VITCATechnology" class="company-logo">
+              <a href="https://powerrentalsa.com/" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='logo_powerrental.jpeg') }}" alt="Logo de Powerrental" class="company-logo">
+              </a>
+              <a href="https://neduarca.com/" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='neduarca-logo.png') }}" alt="Logo de Neduarca" class="company-logo">
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="projects container">
-        <div class="section-head" data-reveal>
-          <h3>Proyectos destacados</h3>
-          <p>Productos reales con métricas y resultados. Cada entrega se enfoca en negocio, rendimiento y experiencia.</p>
-        </div>
-        <div id="projects-grid" class="grid">
-          <!-- Proyecto: My CV -->
-          <article class="card project" data-reveal>
-            <div class="project-head">
-              <h4>My CV</h4>
-              <span class="badge">Open Source</span>
-            </div>
-            <p>AI Resume Builder es una aplicación full-stack que permite a los usuarios crear currículums profesionales
-              de manera rápida y eficiente utilizando modelos de IA.</p>
-            <div class="meta">
-              <span>Repositorio público</span>
-              <span>GitHub</span>
-            </div>
-            <a class="text-link" href="https://github.com/santidevve/my-cv" target="_blank" rel="noopener noreferrer"
-              aria-label="Ver repositorio My CV">Ver repositorio</a>
-          </article>
-
-          <!-- Proyecto: LearnALanguage -->
-          <article class="card project" data-reveal>
-            <div class="project-head">
-              <h4>LearnALanguage</h4>
-              <span class="badge">Open Source</span>
-            </div>
-            <p>Plataforma para seguir tu progreso y estudiar un idioma a través de la lectura de textos. Un remix
-              inspirado en Lute3.</p>
-            <div class="meta">
-              <span>Repositorio público</span>
-              <span>GitHub</span>
-            </div>
-            <a class="text-link" href="https://github.com/santidevve/LearnALanguage" target="_blank"
-              rel="noopener noreferrer" aria-label="Ver repositorio LearnALanguage">Ver repositorio</a>
-          </article>
+      <section id="websites" class="websites section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h3>Páginas web realizadas</h3>
+            <p>Sitios empresariales publicados, desarrollados para marcas reales con presencia digital activa.</p>
+          </div>
+          <div class="websites-grid">
+            <a class="website-card" href="https://powerrentalsa.com/" target="_blank" rel="noopener noreferrer"
+              data-reveal aria-label="Visitar PowerRental S.A.">
+              <div class="website-gallery">
+                <img class="website-shot-main" src="{{ url_for('static', filename='screenshot-powerrental.png') }}"
+                  alt="Inicio de powerrentalsa.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-powerrental-middle.png') }}"
+                  alt="Sección media de powerrentalsa.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-powerrental-bottom.png') }}"
+                  alt="Sección inferior de powerrentalsa.com" loading="lazy">
+              </div>
+              <span>
+                <strong>PowerRental S.A.</strong>
+                <small>powerrentalsa.com</small>
+              </span>
+            </a>
+            <a class="website-card" href="https://neduarca.com/" target="_blank" rel="noopener noreferrer"
+              data-reveal aria-label="Visitar Neduarca">
+              <div class="website-gallery">
+                <img class="website-shot-main" src="{{ url_for('static', filename='screenshot-neduarca.png') }}"
+                  alt="Inicio de neduarca.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-neduarca-middle.png') }}"
+                  alt="Sección media de neduarca.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-neduarca-bottom.png') }}"
+                  alt="Sección inferior de neduarca.com" loading="lazy">
+              </div>
+              <span>
+                <strong>Neduarca</strong>
+                <small>neduarca.com</small>
+              </span>
+            </a>
+            <a class="website-card" href="https://godsneakers.com/" target="_blank" rel="noopener noreferrer"
+              data-reveal aria-label="Visitar GodSneakers">
+              <div class="website-gallery">
+                <img class="website-shot-main" src="{{ url_for('static', filename='screenshot-godsneakers.png') }}"
+                  alt="Inicio de godsneakers.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-godsneakers-middle.png') }}"
+                  alt="Sección media de godsneakers.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-godsneakers-bottom.png') }}"
+                  alt="Sección inferior de godsneakers.com" loading="lazy">
+              </div>
+              <span>
+                <strong>GodSneakers</strong>
+                <small>godsneakers.com</small>
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -170,131 +188,7 @@
               proyectos. Disponibilidad inmediata.</p>
           </div>
 
-          <!-- Experiencia Laboral -->
-          <div class="section-head" data-reveal>
-            <h4>Experiencia Laboral</h4>
-
-            <div class="cv-job">
-              <h5>Profesor de Inglés | Freelancer</h5>
-              <p class="cv-date">2022-2025</p>
-              <ul>
-                <li>Impartición de curso de inglés nivel básico, intermedio y/o avanzado.</li>
-              </ul>
-            </div>
-
-            <div class="cv-job">
-              <h5>Asistente de Planificación y Control | VITCATechnology</h5>
-              <p class="cv-date">Marzo 2025 - Agosto 2025</p>
-              <ul>
-                <li>Diseño e implementación de un sistema de control de horas hombre; registro y clasificación por
-                  proyecto y tarea.</li>
-                <li>Carga de datos; generación de reportes e indicadores; análisis de resultados.</li>
-              </ul>
-            </div>
-
-            <div class="cv-job">
-              <h5>Trabajo Especial de Grado | VITCATechnology</h5>
-              <p class="cv-date">Marzo 2025 - Agosto 2025</p>
-              <ul>
-                <li>Propuesta de un Sistema de Gestión de Procesos Basado en Indicadores para los Procesos
-                  Operacionales de VITCATechnology.</li>
-                <li>Le fue otorgada mención honorífica y publicación.</li>
-              </ul>
-            </div>
-
-            <div class="cv-job">
-              <h5>Pasantías | VITCATechnology</h5>
-              <p class="cv-date">Noviembre 2024 - Febrero 2025</p>
-              <ul>
-                <li>Desarrollo e implantación de un sistema de control de inventario de productos terminados, aceros y
-                  consumibles en el almacén de VITCATechnology.</li>
-              </ul>
-            </div>
-
-            <div class="cv-job">
-              <h5>Pasantías | PDVSA S.A.</h5>
-              <p class="cv-date">Septiembre 2024 - Noviembre 2024</p>
-              <ul>
-                <li>Propuesta de un Plan de Mantenimiento basado en la Metodología de Mantenimiento Centrado en la
-                  Confiabilidad (MCC) para una Bomba, una Turbina y un Compresor de la Refinería Cardón.</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Educación -->
-          <div class="section-head" data-reveal>
-            <h4>Educación</h4>
-
-            <div class="cv-education">
-              <h5>Ingeniería Industrial (2019-2025)</h5>
-              <p>Universidad Nacional Experimental Francisco de Miranda</p>
-            </div>
-
-            <div class="cv-education">
-              <h5>Associates Degree in Computer Science (2021-2024)</h5>
-              <p>Universidad de la Gente, California (EEUU) (En línea)</p>
-            </div>
-
-            <div class="cv-education">
-              <h5>Bachelor in Computer Science (2024 - en progreso)</h5>
-              <p>Universidad de la Gente, California (EEUU) (En línea)</p>
-            </div>
-
-            <div class="cv-education">
-              <h5>Certificación de Desarrollo de Software Full-Stack (2025 - en progreso)</h5>
-              <p>FreeCodeCamp (En línea)</p>
-            </div>
-
-            <div class="cv-education">
-              <h5>Curso de Inglés (2014-2019)</h5>
-              <p>Alpha Learning Academy</p>
-            </div>
-
-            <div class="cv-education">
-              <h5>Curso de Manejo de Extintores</h5>
-              <p>Universidad Nacional Experimental Francisco de Miranda</p>
-            </div>
-          </div>
-
-          <!-- Reconocimientos -->
-          <div class="section-head" data-reveal>
-            <h4>Reconocimientos</h4>
-            <div class="cv-award">
-              <h5>Ganador del Concurso Gandhi 360: Inteligencia de Paz</h5>
-              <p>Universidad Metropolitana (UNIMET), Caracas, Venezuela, Junio del 2024</p>
-            </div>
-          </div>
-
-          <!-- Habilidades -->
-          <div class="section-head" data-reveal>
-            <h4>Habilidades</h4>
-            <ul class="cv-skills-list">
-              <li>Manejo Elemental de la Suite de Office.</li>
-              <li>Trabajo en Equipo.</li>
-              <li>Altamente Responsable.</li>
-              <li>Asertivo.</li>
-              <li>Comprensión Básica de POO (Programación Orientada a Objetos).</li>
-              <li>Conocimientos Elementales de lenguajes de programación como Python, JavaScript, y Java.</li>
-              <li>Mentalidad Abierta.</li>
-            </ul>
-          </div>
-
-          <!-- Idiomas -->
-          <div class="section-head" data-reveal>
-            <h4>Idiomas</h4>
-            <div class="cv-languages">
-              <div class="cv-language">
-                <strong>Castellano:</strong> Nativo.
-              </div>
-              <div class="cv-language">
-                <strong>Inglés:</strong> C1 Advanced según la Certificación EF SET
-              </div>
-              <div class="cv-language">
-                <strong>Francés:</strong> A1
-              </div>
-            </div>
-          </div>
-
+          
           <!-- Referencias -->
           <div class="section-head" data-reveal>
             <h4>Referencias</h4>
