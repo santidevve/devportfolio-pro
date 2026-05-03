@@ -8,7 +8,7 @@ Autor: Santiago Hernandez Pontiles
 """
 
 import os
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, send_from_directory
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 
@@ -44,6 +44,16 @@ def home():
 def contact():
     """Página del formulario de contacto."""
     return render_template('contactForm.html')
+
+@app.route('/robots.txt')
+def static_from_root_robots():
+    """Servir robots.txt desde la raíz."""
+    return send_from_directory(app.static_folder, 'robots.txt')
+
+@app.route('/sitemap.xml')
+def static_from_root_sitemap():
+    """Servir sitemap.xml desde la raíz."""
+    return send_from_directory(app.static_folder, 'sitemap.xml')
 
 
 @app.route('/send-email', methods=['POST'])

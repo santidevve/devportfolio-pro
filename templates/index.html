@@ -4,12 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Santiago Hernandez | Portfolio</title>
+  <title>Santiago Hernandez | Desarrollador Web Venezuela</title>
+  <meta name="description" content="Portafolio de Santiago Hernandez, Desarrollador Web en Venezuela e Ingeniero Industrial. Especializado en creación de aplicaciones web empresariales, eficientes y escalables.">
+  <meta name="keywords" content="Desarrollador Web Venezuela, Full-Stack Developer, Ingeniero Industrial, Páginas Web, Aplicaciones Web">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://santiagopontiles.com/">
+  <meta property="og:title" content="Santiago Hernandez | Desarrollador Web Venezuela">
+  <meta property="og:description" content="Portafolio de Santiago Hernandez, Desarrollador Web en Venezuela e Ingeniero Industrial. Especializado en creación de aplicaciones web empresariales.">
+  <meta property="og:image" content="https://santiagopontiles.com/static/cv-photo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://santiagopontiles.com/">
+  <meta property="twitter:title" content="Santiago Hernandez | Desarrollador Web Venezuela">
+  <meta property="twitter:description" content="Portafolio de Santiago Hernandez, Desarrollador Web en Venezuela e Ingeniero Industrial. Especializado en creación de aplicaciones web empresariales.">
+  <meta property="twitter:image" content="https://santiagopontiles.com/static/cv-photo.png">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://santiagopontiles.com/">
+
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='cv-photo.png') }}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7ie1zF6F9g8F5y5r5g5r5g5r5g5r5g5r5g5" crossorigin="anonymous">
-</head>
-<link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Santiago Hernandez",
+    "url": "https://santiagopontiles.com/",
+    "image": "https://santiagopontiles.com/static/cv-photo.png",
+    "jobTitle": "Desarrollador Web Full-Stack e Ingeniero Industrial",
+    "description": "Desarrollador Web en Venezuela especializado en páginas web corporativas y aplicaciones.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Venezuela"
+    },
+    "sameAs": [
+      "https://github.com/santidevve",
+      "https://www.linkedin.com/in/santiago-hernández-385469323",
+      "https://www.instagram.com/santiagopontiles/"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -75,137 +116,10 @@
         </div>
       </section>
 
-
-      <section id="about" class="about section">
-        <div class="container split" data-reveal>
-          <div>
-            <h3>Sobre mi</h3>
-            <p style="text-align: justify;">¿Por qué elegir entre eficiencia y tecnología cuando puedes tener ambas? Como Ingeniero Industrial y
-              desarrollador, mi enfoque no es solo que una web "funcione", sino que sea la pieza clave en la maquinaria
-              de tu empresa.</p>
-            <p style="text-align: justify;">He trabajado en la transición digital de negocios híbridos (físicos y virtuales), ayudando a
-              emprendedores a escalar mediante la automatización de sus inventarios y la mejora de su presencia online.
-              Si buscas a alguien que entienda de métricas, procesos y código, hablemos.</p>
-          </div>
-          <div class="stack">
-            <h4>Tecnologias Manejadas</h4>
-            <ul class="tag-list">
-              <li>Flask</li>
-              <li>Django</li>
-              <li>JS Vanilla</li>
-              <li>SQL</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- Sección de logos de clientes que confían en mi trabajo -->
-      <section id="trust" class="trust section">
-        <div class="container" data-reveal>
-          <div class="trust-content">
-            <h4>Confían en mi trabajo</h4>
-            <div class="trust-logos">
-              <a href="https://godsneakers.com/" target="_blank" rel="noopener noreferrer">
-                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo de God Shoes Vzla" class="company-logo">
-              </a>
-              <img src="{{ url_for('static', filename='logo_vitca.png') }}" alt="Logo de VITCATechnology" class="company-logo">
-              <a href="https://powerrentalsa.com/" target="_blank" rel="noopener noreferrer">
-                <img src="{{ url_for('static', filename='logo_powerrental.jpeg') }}" alt="Logo de Powerrental" class="company-logo">
-              </a>
-              <a href="https://neduarca.com/" target="_blank" rel="noopener noreferrer">
-                <img src="{{ url_for('static', filename='neduarca-logo.png') }}" alt="Logo de Neduarca" class="company-logo">
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="websites" class="websites section">
-        <div class="container">
-          <div class="section-head" data-reveal>
-            <h3>Páginas web realizadas</h3>
-            <p>Sitios empresariales publicados, desarrollados para marcas reales con presencia digital activa.</p>
-          </div>
-          <div class="websites-grid">
-            <a class="website-card" href="https://powerrentalsa.com/" target="_blank" rel="noopener noreferrer"
-              data-reveal aria-label="Visitar PowerRental S.A.">
-              <div class="website-gallery">
-                <img class="website-shot-main" src="{{ url_for('static', filename='screenshot-powerrental.png') }}"
-                  alt="Inicio de powerrentalsa.com" loading="lazy">
-                <img src="{{ url_for('static', filename='screenshot-powerrental-middle.png') }}"
-                  alt="Sección media de powerrentalsa.com" loading="lazy">
-                <img src="{{ url_for('static', filename='screenshot-powerrental-bottom.png') }}"
-                  alt="Sección inferior de powerrentalsa.com" loading="lazy">
-              </div>
-              <span>
-                <strong>PowerRental S.A.</strong>
-                <small>powerrentalsa.com</small>
-              </span>
-            </a>
-            <a class="website-card" href="https://neduarca.com/" target="_blank" rel="noopener noreferrer"
-              data-reveal aria-label="Visitar Neduarca">
-              <div class="website-gallery">
-                <img class="website-shot-main" src="{{ url_for('static', filename='screenshot-neduarca.png') }}"
-                  alt="Inicio de neduarca.com" loading="lazy">
-                <img src="{{ url_for('static', filename='screenshot-neduarca-middle.png') }}"
-                  alt="Sección media de neduarca.com" loading="lazy">
-                <img src="{{ url_for('static', filename='screenshot-neduarca-bottom.png') }}"
-                  alt="Sección inferior de neduarca.com" loading="lazy">
-              </div>
-              <span>
-                <strong>Neduarca</strong>
-                <small>neduarca.com</small>
-              </span>
-            </a>
-            <a class="website-card" href="https://godsneakers.com/" target="_blank" rel="noopener noreferrer"
-              data-reveal aria-label="Visitar GodSneakers">
-              <div class="website-gallery">
-                <img class="website-shot-main" src="{{ url_for('static', filename='screenshot-godsneakers.png') }}"
-                  alt="Inicio de godsneakers.com" loading="lazy">
-                <img src="{{ url_for('static', filename='screenshot-godsneakers-middle.png') }}"
-                  alt="Sección media de godsneakers.com" loading="lazy">
-                <img src="{{ url_for('static', filename='screenshot-godsneakers-bottom.png') }}"
-                  alt="Sección inferior de godsneakers.com" loading="lazy">
-              </div>
-              <span>
-                <strong>GodSneakers</strong>
-                <small>godsneakers.com</small>
-              </span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Sección CV -->
-      <section id="cv" class="cv-section section">
-        <div class="container">
-          <!-- Perfil Profesional -->
-          <div class="section-head" data-reveal>
-            <h4>Perfil Profesional</h4>
-            <p style="text-align: justify;">Ingeniero Industrial (Universidad Nacional Experimental Francisco de Miranda) y Técnico Superior en
-              Ciencias Computacionales (Universidad de la Gente, California, EE.UU.), con certificado EF SET C1 en
-              inglés, nivel A1 en francés y formación en programación (Python, JavaScript, Java). Experiencia en
-              desarrollo de sistemas administrativos y gestión de procesos operacionales y control de horas-hombre de
-              proyectos. Disponibilidad inmediata.</p>
-          </div>
-
-          
-          <!-- Referencias -->
-          <div class="section-head" data-reveal>
-            <h4>Referencias</h4>
-            <ul class="cv-references">
-              <li>Ing. Rafael Garcia - Ing. de Equipos Rotativos</li>
-              <li>Ing. José Hernández - Ing. de Planificación y Contratos</li>
-              <li>Ing. MSc. Zoila Pontiles - Docente Universitaria</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-
       <section id="contact" class="contact section">
         <div class="container" data-reveal>
           <div class="section-head">
-            <h3>¡Cuéntame de tu proyecto!</h3>
+            <h2>¡Cuéntame de tu proyecto!</h2>
             <p>Cuéntame sobre tu proyecto y te responderé lo antes posible.</p>
           </div>
           <form id="contact-form" class="form-card">
@@ -226,6 +140,106 @@
             <p class="form-note">Responderé dentro de 24-48 horas hábiles.</p>
             <button type="submit" id="submit-btn" class="btn btn-primary">Enviar</button>
           </form>
+        </div>
+      </section>
+
+      <!-- Sección de logos de clientes que confían en mi trabajo -->
+      <section id="trust" class="trust section">
+        <div class="container" data-reveal>
+          <div class="trust-content">
+            <h2>Confían en mi trabajo</h2>
+            <div class="trust-logos">
+              <a href="https://godsneakers.com/" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo de God Shoes Vzla" class="company-logo">
+              </a>
+              <img src="{{ url_for('static', filename='logo_vitca.png') }}" alt="Logo de VITCATechnology" class="company-logo">
+              <a href="https://powerrentalsa.com/" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='logo_powerrental.jpeg') }}" alt="Logo de Powerrental" class="company-logo">
+              </a>
+              <a href="https://neduarca.com/" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='neduarca-logo.png') }}" alt="Logo de Neduarca" class="company-logo">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about section">
+        <div class="container split" data-reveal>
+          <div>
+            <h2>Sobre mi</h2>
+            <p style="text-align: justify;">¿Por qué elegir entre eficiencia y tecnología cuando puedes tener ambas? Como Ingeniero Industrial y
+              desarrollador, mi enfoque no es solo que una web "funcione", sino que sea la pieza clave en la maquinaria
+              de tu empresa.</p>
+            <p style="text-align: justify;">He trabajado en la transición digital de negocios híbridos (físicos y virtuales), ayudando a
+              emprendedores a escalar mediante la automatización de sus inventarios y la mejora de su presencia online.
+              Si buscas a alguien que entienda de métricas, procesos y código, hablemos.</p>
+          </div>
+          <div class="stack">
+            <h3>Tecnologías Manejadas</h3>
+            <ul class="tag-list">
+              <li>Flask</li>
+              <li>Django</li>
+              <li>JS Vanilla</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="websites" class="websites section">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <h2>Páginas web realizadas</h2>
+            <p>Sitios empresariales publicados, desarrollados para marcas reales con presencia digital activa.</p>
+          </div>
+          <div class="websites-grid">
+            <a class="website-card" href="https://powerrentalsa.com/" target="_blank" rel="noopener noreferrer"
+              data-reveal aria-label="Visitar PowerRental S.A.">
+              <div class="website-gallery">
+                <img class="website-shot-main" src="{{ url_for('static', filename='screenshot-powerrental.png') }}"
+                  alt="Proyecto de Desarrollo Web: Inicio de powerrentalsa.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-powerrental-middle.png') }}"
+                  alt="Sección media de powerrentalsa.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-powerrental-bottom.png') }}"
+                  alt="Sección inferior de powerrentalsa.com" loading="lazy">
+              </div>
+              <span>
+                <strong>PowerRental S.A.</strong>
+                <small>powerrentalsa.com</small>
+              </span>
+            </a>
+            <a class="website-card" href="https://neduarca.com/" target="_blank" rel="noopener noreferrer"
+              data-reveal aria-label="Visitar Neduarca">
+              <div class="website-gallery">
+                <img class="website-shot-main" src="{{ url_for('static', filename='screenshot-neduarca.png') }}"
+                  alt="Proyecto de Desarrollo Web: Inicio de neduarca.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-neduarca-middle.png') }}"
+                  alt="Sección media de neduarca.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-neduarca-bottom.png') }}"
+                  alt="Sección inferior de neduarca.com" loading="lazy">
+              </div>
+              <span>
+                <strong>Neduarca</strong>
+                <small>neduarca.com</small>
+              </span>
+            </a>
+            <a class="website-card" href="https://godsneakers.com/" target="_blank" rel="noopener noreferrer"
+              data-reveal aria-label="Visitar GodSneakers">
+              <div class="website-gallery">
+                <img class="website-shot-main" src="{{ url_for('static', filename='screenshot-godsneakers.png') }}"
+                  alt="Proyecto de Desarrollo Web: Inicio de godsneakers.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-godsneakers-middle.png') }}"
+                  alt="Sección media de godsneakers.com" loading="lazy">
+                <img src="{{ url_for('static', filename='screenshot-godsneakers-bottom.png') }}"
+                  alt="Sección inferior de godsneakers.com" loading="lazy">
+              </div>
+              <span>
+                <strong>GodSneakers</strong>
+                <small>godsneakers.com</small>
+              </span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
