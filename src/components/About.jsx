@@ -7,20 +7,17 @@ export default function About() {
           <div>
             <h2>Sobre mí</h2>
             <p style={{ textAlign: 'justify' }}>
-              Soy Santiago Hernandez, Ingeniero Industrial y Desarrollador Full-Stack radicado en Venezuela. Mi trayectoria profesional me ha enseñado que la tecnología y la eficiencia operativa deben ir de la mano. No me conformo con que una web simplemente "funcione"; mi objetivo es desarrollar soluciones digitales que se conviertan en una pieza clave para la maquinaria y el crecimiento de tu empresa.
+              Soy Santiago Hernandez, Desarrollador Web e Ingeniero Industrial radicado en Venezuela. Mi objetivo es mejorar la presencia digital de su empresa. Mi trayectoria academica y profesional demuestran mi resiliencia, compromiso y honestidad en mi trabajo.
             </p>
             <p style={{ textAlign: 'justify' }}>
-              A lo largo de mi carrera, he liderado la transición digital de negocios con modelos híbridos, ayudando a emprendedores y corporaciones a escalar mediante la automatización de procesos, el manejo inteligente de datos y el rediseño de su presencia online.
-            </p>
-            <p style={{ textAlign: 'justify' }}>
-              Desde el diseño UX/UI y el desarrollo integral hasta la gestión de dominios y hosting empresarial, me encargo de todo el ciclo de vida del producto.
+              Desde el diseño UX/UI y el desarrollo integral hasta la gestión de dominios y hosting empresarial, me encargo de gestionar la imagen de su organizacion.
             </p>
           </div>
 
           <div>
             <h3 style={{ marginBottom: '1.5rem' }}>Tecnologías Manejadas</h3>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
-              {['React', 'Flask', 'Python', 'Node.js', 'SQL', 'JavaScript', 'CSS'].map(tech => (
+              {['Flask', 'Python', 'Node.js', 'SQL', 'JavaScript', 'CSS'].map(tech => (
                 <span 
                   key={tech} 
                   style={{ 
@@ -41,21 +38,20 @@ export default function About() {
               <h4 style={{ marginBottom: '1rem', fontWeight: 600 }}>Servicios Integrales</h4>
               <ul style={{ listStyleType: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span style={{ color: 'var(--text-color)' }}>•</span> Diseño UX/UI Moderno
+                  <span style={{ color: 'var(--text-color)' }}>•</span> Diseño de Sitios Web Estaticos Modernos
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span style={{ color: 'var(--text-color)' }}>•</span> Aplicaciones Web Escalables
+                  <span style={{ color: 'var(--text-color)' }}>•</span> Aplicaciones Web
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span style={{ color: 'var(--text-color)' }}>•</span> Automatización y APIs
+                  <span style={{ color: 'var(--text-color)' }}>•</span> Gestión de Dominios y Hosting
                 </li>
                 <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <span style={{ color: 'var(--text-color)' }}>•</span> Hosting y Gestión de Dominios
+                  <span style={{ color: 'var(--text-color)' }}>•</span> Gestión de SEO
                 </li>
               </ul>
             </div>
           </div>
-
         </div>
       </div>
     </section>

@@ -14,10 +14,10 @@ const projects = [
     imgMain: "/screenshot-neduarca.png",
   },
   {
-    name: "GodSneakers",
-    url: "https://godsneakers.com/",
-    domain: "godsneakers.com",
-    imgMain: "/screenshot-godsneakers.png",
+    name: "Rosa Mística Construcciones",
+    url: "https://rosamisticaconstrucciones.com/",
+    domain: "rosamisticaconstrucciones.com",
+    imgMain: "/screenshot-rosamistica.png",
   }
 ];
 
